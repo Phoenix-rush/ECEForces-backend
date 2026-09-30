@@ -35,7 +35,7 @@ function judgeSubmission(code, problemSlug) {
 
         const verilogFile = path.join(tmpDir, 'module.v');
         const simOut = path.join(tmpDir, 'sim.out');
-        const testbenchFile = path.resolve(__dirname, '../../../problems', problemSlug, 'testbench.v');
+        const testbenchFile = path.resolve(__dirname, '../../problems', problemSlug, 'testbench.v');
 
         const cleanup = () => {
             try { fs.rmSync(tmpDir, { recursive: true, force: true }); } catch (_) {}
